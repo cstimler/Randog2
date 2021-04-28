@@ -13,6 +13,8 @@
 		9F8ED9CA2638DFCA0017E851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8ED9C82638DFCA0017E851 /* Main.storyboard */; };
 		9F8ED9CC2638DFCB0017E851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8ED9CB2638DFCB0017E851 /* Assets.xcassets */; };
 		9F8ED9CF2638DFCB0017E851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8ED9CD2638DFCB0017E851 /* LaunchScreen.storyboard */; };
+		9F8ED9DC2638E0A40017E851 /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8ED9DB2638E0A40017E851 /* DogAPI.swift */; };
+		9F8ED9E02638E0D20017E851 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8ED9DF2638E0D20017E851 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9F8ED9CB2638DFCB0017E851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8ED9CE2638DFCB0017E851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F8ED9D02638DFCB0017E851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F8ED9DB2638E0A40017E851 /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
+		9F8ED9DF2638E0D20017E851 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		9F8ED9C12638DFCA0017E851 /* Randog2 */ = {
 			isa = PBXGroup;
 			children = (
-				9F8ED9C22638DFCA0017E851 /* AppDelegate.swift */,
-				9F8ED9C42638DFCA0017E851 /* SceneDelegate.swift */,
-				9F8ED9C62638DFCA0017E851 /* ViewController.swift */,
-				9F8ED9C82638DFCA0017E851 /* Main.storyboard */,
-				9F8ED9CB2638DFCB0017E851 /* Assets.xcassets */,
-				9F8ED9CD2638DFCB0017E851 /* LaunchScreen.storyboard */,
+				9F8ED9DA2638DFF40017E851 /* Model */,
+				9F8ED9D82638DFE90017E851 /* Controller */,
+				9F8ED9D72638DFDD0017E851 /* View */,
 				9F8ED9D02638DFCB0017E851 /* Info.plist */,
 			);
 			path = Randog2;
+			sourceTree = "<group>";
+		};
+		9F8ED9D72638DFDD0017E851 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F8ED9C82638DFCA0017E851 /* Main.storyboard */,
+				9F8ED9CB2638DFCB0017E851 /* Assets.xcassets */,
+				9F8ED9CD2638DFCB0017E851 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F8ED9D82638DFE90017E851 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F8ED9C22638DFCA0017E851 /* AppDelegate.swift */,
+				9F8ED9C42638DFCA0017E851 /* SceneDelegate.swift */,
+				9F8ED9C62638DFCA0017E851 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F8ED9DA2638DFF40017E851 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F8ED9DB2638E0A40017E851 /* DogAPI.swift */,
+				9F8ED9DF2638E0D20017E851 /* DogImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8ED9C72638DFCA0017E851 /* ViewController.swift in Sources */,
+				9F8ED9E02638E0D20017E851 /* DogImage.swift in Sources */,
 				9F8ED9C32638DFCA0017E851 /* AppDelegate.swift in Sources */,
 				9F8ED9C52638DFCA0017E851 /* SceneDelegate.swift in Sources */,
+				9F8ED9DC2638E0A40017E851 /* DogAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
