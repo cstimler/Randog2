@@ -13,16 +13,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
     
-    let breeds: [String] = ["poodle", "greyhound"]
+    var breeds: [String] = ["poodle", "greyhound"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
-        // Do any additional setup after loading the view.
+        DogAPI.requestBreedsList(completionHandler: self.handleBreedsListResponse(breeds:error:))
         
 }
-
     
     func handleImageFileResponse(image: UIImage?, error: Error?) {
         DispatchQueue.main.async {
@@ -42,8 +41,17 @@ class ViewController: UIViewController {
         }
 }
     
-
-}
+    func handleBreedsListResponse(breeds: [String]?, error: Error?) {
+        guard let breeds = breeds else {
+            print("No breeds list")
+            return
+        }
+        self.breeds = breeds
+        DispatchQueue.main.async {
+            self.pickerView.reloadAllComponents()
+        }
+    }
+ }
 
 extension ViewController:
     UIPickerViewDataSource, UIPickerViewDelegate {
