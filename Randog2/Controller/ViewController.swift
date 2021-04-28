@@ -61,6 +61,6 @@ extension ViewController:
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        DogAPI.requestRandomImage(completionHandler: self.handleRandomImageResponse(dogImage:error:))
+        DogAPI.requestRandomImage(breed: breeds[row], completionHandler: self.handleRandomImageResponse(dogImage:error:))
     }
 }
